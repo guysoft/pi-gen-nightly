@@ -4,7 +4,7 @@ sudo apt-get install -y quilt parted realpath qemu-user-static debootstrap zerof
 dosfstools bsdtar libcap2-bin grep rsync
 sudo apt-get install -y git
 
-sudo apt-get install \
+sudo apt-get install -y  \
      apt-transport-https \
      ca-certificates \
      curl \

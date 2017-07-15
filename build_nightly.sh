@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 DIR=$(dirname $(realpath -s $BASH_SOURCE))
 OUT_FOLDER=$DIR/export
+rm -rf "${OUT_FOLDER}"/*
 
 pushd /
     rm -rf pi-gen || true
