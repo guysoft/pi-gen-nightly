@@ -5,5 +5,11 @@ Vagrant.configure("2") do |o|
     o.vm.provision :shell, :path => "setup.sh", args: ENV['SHELL_ARGS']
 
     o.disksize.size = '50GB'
+    o.vm.provider 'virtualbox' do |v|
+        v.customize ['modifyvm', :id, '--cableconnected1', 'on']
+        v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
+        v.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
+    end
+
 
 end
